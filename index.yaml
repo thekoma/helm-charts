@@ -1,5 +1,24 @@
 apiVersion: v1
 entries:
+  icinga-kubernetes:
+  - apiVersion: v2
+    appVersion: edge
+    created: "2024-03-30T21:48:07.998960206Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 2.x.x
+    description: Icinga Kubernetes
+    digest: 734a9d2ef9790af86e244e89d2f683ab315ca7220aaa4f8200328c2a5fcfe1b2
+    maintainers:
+    - email: info@icinga.com
+      name: Icinga GmbH
+      url: https://icinga.com
+    name: icinga-kubernetes
+    type: application
+    urls:
+    - https://github.com/thekoma/helm-charts/releases/download/icinga-kubernetes-0.1.1/icinga-kubernetes-0.1.1.tgz
+    version: 0.1.1
   icinga-stack:
   - apiVersion: v2
     appVersion: 0.3.0
@@ -21,4 +40,53 @@ entries:
     urls:
     - https://github.com/thekoma/helm-charts/releases/download/icinga-stack-0.3.1/icinga-stack-0.3.1.tgz
     version: 0.3.1
-generated: "2024-03-30T21:38:33.997054496Z"
+  icinga2:
+  - apiVersion: v2
+    appVersion: 2.13.7
+    created: "2024-03-30T21:48:08.181686201Z"
+    description: Icinga is a monitoring system which checks the availability of your
+      network resources, notifies users of outages, and generates performance data
+      for reporting.
+    digest: 414a6c49e893fc4d0674251caa6934260b9dd36f9df57a96d5cbb0e7ba7e1014
+    maintainers:
+    - email: daniel.bodky@netways.de
+      name: Daniel Bodky
+      url: https://github.com/mocdaniel
+    name: icinga2
+    type: application
+    urls:
+    - https://github.com/thekoma/helm-charts/releases/download/icinga2-0.3.1/icinga2-0.3.1.tgz
+    version: 0.3.1
+  icingadb:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-03-30T21:48:08.273854744Z"
+    description: Icinga DB is a set of components for publishing, synchronizing and
+      visualizing monitoring data in the Icinga ecosystem.
+    digest: 09b82af61698ca90fdb0adb34bdfc31f24263e4292a1a437dd62950c57a27474
+    maintainers:
+    - email: daniel.bodky@netways.de
+      name: Daniel Bodky
+      url: https://github.com/mocdaniel
+    name: icingadb
+    type: application
+    urls:
+    - https://github.com/thekoma/helm-charts/releases/download/icingadb-0.3.2/icingadb-0.3.2.tgz
+    version: 0.3.2
+  icingaweb2:
+  - apiVersion: v2
+    appVersion: 2.12.1
+    created: "2024-03-30T21:48:08.359111177Z"
+    description: Icinga Web 2 is a powerful PHP framework for web applications that
+      comes in a clean and reduced design.
+    digest: 468541548d4f12a9dc1a38e4da5fb78b9cdc09a32a6b32924b903e557e68012f
+    maintainers:
+    - email: daniel.bodky@netways.de
+      name: Daniel Bodky
+      url: https://github.com/mocdaniel
+    name: icingaweb2
+    type: application
+    urls:
+    - https://github.com/thekoma/helm-charts/releases/download/icingaweb2-0.3.1/icingaweb2-0.3.1.tgz
+    version: 0.3.1
+generated: "2024-03-30T21:48:08.359141033Z"

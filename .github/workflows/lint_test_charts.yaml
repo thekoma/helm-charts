@@ -23,10 +23,10 @@ jobs:
           options: -v ${{ github.workspace }}:/apps
           run: |
             set -x
-            cd charts/icinga-stack
+            cd charts
             helm dependency update
             helm unittest .
-            for chart in $(ls -1 $PWD/charts/); do
+            for chart in $(ls -1 $PWD); do
                 cd $chart
                 helm dependency update
                 helm unittest .

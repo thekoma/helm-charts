@@ -23,11 +23,10 @@ jobs:
           options: -v ${{ github.workspace }}:/apps
           run: |
             set -x
-            cd charts
+            CHARTS=$PWD/charts
             helm dependency update
-            helm unittest .
-            for chart in $(ls -1 $PWD); do
-                cd $chart
+            for CHART in $(ls -1 $CHARTS); do
+                cd $CHART
                 helm dependency update
                 helm unittest .
             done

@@ -30,7 +30,6 @@ jobs:
         with:
           charts_dir: ./charts
           skip_existing: true
-          fetch-depth: 0
 
       - name: Run chart-releaser icinga2
         continue-on-error: true
@@ -40,7 +39,6 @@ jobs:
         with:
           charts_dir: ./charts/icinga-stack/charts/icinga2
           skip_existing: true
-          fetch-depth: 0
 
       - name: Run chart-releaser icingadb
         continue-on-error: true
@@ -50,7 +48,6 @@ jobs:
         with:
           charts_dir: ./charts/icinga-stack/charts/icingadb
           skip_existing: true
-          fetch-depth: 0
 
       - name: Run chart-releaser icinga-kubernetes
         continue-on-error: true
@@ -60,7 +57,6 @@ jobs:
         with:
           charts_dir: ./charts/icinga-stack/charts/icinga-kubernetes
           skip_existing: true
-          fetch-depth: 0
 
       - name: Run chart-releaser icingaweb2
         continue-on-error: true
@@ -70,5 +66,4 @@ jobs:
         with:
           charts_dir: ./charts/icinga-stack/charts/icingaweb2
           skip_existing: true
-          fetch-depth: 0
 

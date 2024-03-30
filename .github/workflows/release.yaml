@@ -36,6 +36,6 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
-          charts_dir: ./charts/icinga-stack
+          charts_dir: ./charts/icinga-stack/charts
           skip_existing: true
           fetch-depth: 0

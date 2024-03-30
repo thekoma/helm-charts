@@ -26,3 +26,8 @@ jobs:
             cd charts/icinga-stack
             helm dependency update
             helm unittest .
+            for chart in $(ls -1 $PWD/charts/); do
+                cd $chart
+                helm dependency update
+                helm unittest .
+            done

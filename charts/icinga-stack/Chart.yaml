@@ -2,6 +2,18 @@ dependencies:
   - name: common
     version: 2.x.x
     repository: oci://registry-1.docker.io/bitnamicharts
+  - name: icinga-kubernetes
+    version: '>=0.0.1'
+    repository:  https://thekoma.github.io/helm-charts
+  - name: icinga2
+    version: '>=0.0.1'
+    repository:  https://thekoma.github.io/helm-charts
+  - name: icingadb
+    version: '>=0.0.1'
+    repository:  https://thekoma.github.io/helm-charts
+  - name: icingaweb2
+    version: '>=0.0.1'
+    repository:  https://thekoma.github.io/helm-charts
 
 apiVersion: v2
 name: icinga-stack

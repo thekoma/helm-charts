@@ -28,5 +28,7 @@ jobs:
             for CHART in $(ls -1 $CHARTS); do
                 cd $CHARTS/$CHART
                 helm dependency update
-                helm unittest .
+
             done
+            cd $CHARTS
+            helm unittest *

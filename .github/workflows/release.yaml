@@ -28,6 +28,8 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
           charts_dir: ./charts
+          skip_existing: true
+          fetch-depth: 0
 
       - name: Run chart-releaser submodules
         uses: helm/chart-releaser-action@v1.6.0
@@ -35,3 +37,5 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
           charts_dir: ./charts/icinga-stack
+          skip_existing: true
+          fetch-depth: 0

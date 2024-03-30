@@ -1,2 +1,5 @@
 TODOS.md
 __snapshot__/
+**/.cr-release-packages/*
+**/Chart.lock
+**/*.tgz

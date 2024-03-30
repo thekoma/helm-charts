@@ -22,7 +22,8 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Run chart-releaser
+      - name: Run chart-releaser icinga-stack
+        continue-on-error: true
         uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -31,11 +32,43 @@ jobs:
           skip_existing: true
           fetch-depth: 0
 
-      - name: Run chart-releaser submodules
+      - name: Run chart-releaser icinga2
+        continue-on-error: true
         uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
-          charts_dir: ./charts/icinga-stack/charts
+          charts_dir: ./charts/icinga-stack/charts/icinga2
           skip_existing: true
           fetch-depth: 0
+
+      - name: Run chart-releaser icingadb
+        continue-on-error: true
+        uses: helm/chart-releaser-action@v1.6.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          charts_dir: ./charts/icinga-stack/charts/icingadb
+          skip_existing: true
+          fetch-depth: 0
+
+      - name: Run chart-releaser icinga-kubernetes
+        continue-on-error: true
+        uses: helm/chart-releaser-action@v1.6.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          charts_dir: ./charts/icinga-stack/charts/icinga-kubernetes
+          skip_existing: true
+          fetch-depth: 0
+
+      - name: Run chart-releaser icingaweb2
+        continue-on-error: true
+        uses: helm/chart-releaser-action@v1.6.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          charts_dir: ./charts/icinga-stack/charts/icingaweb2
+          skip_existing: true
+          fetch-depth: 0
+

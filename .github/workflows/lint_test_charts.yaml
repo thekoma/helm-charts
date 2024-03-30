@@ -26,7 +26,7 @@ jobs:
             CHARTS=$PWD/charts
             helm dependency update
             for CHART in $(ls -1 $CHARTS); do
-                cd $CHART
+                cd $CHARTS/$CHART
                 helm dependency update
                 helm unittest .
             done
